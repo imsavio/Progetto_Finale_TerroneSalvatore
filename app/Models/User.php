@@ -45,4 +45,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // Relazione One-to-Many con Article
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 }
